@@ -141,7 +141,7 @@ void SetFrequency (unsigned long frequency) { // Frequency in Hz; must be within
     write_register(46, 0);                      // Bits [7:0]  of MS0_P1 must be 0
   }
   //TODO czy to potrzebne? - jeśli tak - robić restart tylko przy zmianie pasma - dodatkowy parametr funkcji
-  // write_register(177, 32);                      // This resets PLL A
+  // write_register(177, 32);                      // This resets PLL A -> absolutnie nie resetować!
   //TODO włączenie zasilania dla clk (16 rejestr) niepotrzebne?
 }
 void Set_BFO_Frequency (unsigned long frequency) {
